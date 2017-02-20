@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html ng-app="appName">
+<html lang="en">
+<base href="/">
+<ui-view>
+<script type="text/javascript">
+  var userip;
+</script>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="../reset.css">
+   <link rel="stylesheet" href="../baseStyle.css">
+   <link rel="stylesheet" href="./homeStyle.css">
+
+	<title>LocalApp</title>
+</head>
+
+<body>
+
+<header class="main-header">
+	<h2>{{city}}</h2>
+	<div class="header-info">
+		<div class="air-quality">
+			<h3>{{aqiResponse.breezometer_aqi}}</h3>
+			<p>{{aqiResponse.breezometer_description}}</p>
+		</div>
+		<div class="current-weather">
+			<img data-ng-src="http://openweathermap.org/img/w/{{weatherResponse[3].weather[0].icon}}.png" class="weatherImg">
+			<p>{{weatherResponse[3].main.temp_min | number:0}} - {{weatherResponse[3].main.temp_max | number:0}} &#8457;</p>
+		</div>
+	</div>
+
+<aside>
+	<div class="forecast-not-displayed">
+		<div class="day" ng-repeat="weather in weatherResponse | limitTo: 3">
+			<h4>{{weather.dt_txt | toSec | date: 'EEE'}}</h4>
+			
+				<div ng-repeat="icon in weather.weather"><img data-ng-src="http://openweathermap.org/img/w/{{icon.icon}}.png" class="weatherImg"></div>
+			<p>{{weather.main.temp_min | number:0}}&#8457; - {{weather.main.temp_max | number:0}}&#8457;</p>
+		</div>
+	</div>
+</aside>
+
+	<div class="forecast-arrow-down">
+		<img src="../icons/down-arrow.svg">
+	</div>
+</header>
+
+
+
+<main role="main" class="main">
+	<a ui-sref="headlines"><h1>Headlines</h1><br></a>
+	<h1 class="not-yet">Social</h1>
+</main>
+
+
+<footer class="main-footer">
+	<a ui-sref="settings"><img src="../icons/settings.svg"></a>
+</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
+<script
+src="https://code.jquery.com/jquery-3.1.1.js"
+integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+crossorigin="anonymous"></script>
+<script
+src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"
+integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+crossorigin="anonymous"></script>
+
+ <script src="/homeActions.js"></script>
+<script src="/script/app.js"></script>
+<script src="/script/controller.js"></script>
+<script src="/script/service.js"></script>
+<script src="/script/angular-cookies.js"></script>
+<script src="https://www.l2.io/ip.js?var=userip"></script>
+<script src="/settings/settingsActions.js"></script>
+<script src="/settings/settingsCtrl.js"></script>
+<script src="/settings/settingsSvc.js"></script>
+<script src="/headlines/headlinesCtrl.js"></script>
+<script src="/headlines/headlinesDirective.js"></script>
+
+</ui-view>
+</html>

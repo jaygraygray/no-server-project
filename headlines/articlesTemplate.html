@@ -1,0 +1,26 @@
+<div ng-repeat="data in stories">
+	<h3 class="category-header" id="{{data.source}}">{{data.source}}</h3>
+		<div ng-repeat="article in data.articles">
+		<div class="story" style="
+				background: linear-gradient(
+				rgba(255,255,255, 1),
+				rgba(255,255,255, 0.5)),
+		url({{article.urlToImage}}); center no-repeat;
+		background-size: cover;">	
+		<h5> <a href="{{article.url}}">{{article.title}}</a></h5>
+		<p>{{article.description}}</p>
+
+		</div>
+	</div>
+</div>
+
+<aside>
+<div class="menu-container">
+	<div class="headlinesMenu" id="headlines">
+		<div class="menu-hide">x</div>
+		<ul ng-repeat="data in stories">
+			<li><h4><a href="#{{data.source}}">{{data.source}}</a></h4></li>
+		</ul>
+	</div>
+</div>
+</aside>

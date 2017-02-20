@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Open+Sans+Condensed:300,300i,700');
+
+html {
+	font-size: 16px;
+}
+
+h1,h2,h3,h4,h5 {
+	font-family: 'Anton', sans-serif;
+}
+
+
+h1 {
+	font-size: 3rem;
+	letter-spacing: 6px;
+	color: #261933;
+	padding-top:9vh;
+}
+
+.not-yet {
+	opacity: .2;
+	padding-top: 9vh;
+}
+h2 {
+	font-size: 6vw;
+	letter-spacing: 6px;
+	color: #261933;
+}
+
+h3 { 
+	font-size:2rem;
+	color:#3B454B;
+	font-weight:100;
+	padding-bottom:16px;
+}
+
+h4 {
+	font-size:1.2rem;
+	letter-spacing: 2px;
+	padding-bottom: 12px;
+	color: #3B454B;
+}
+
+p, li, a, button {
+	font-family: 'Open Sans', sans-serif;
+	padding:none;
+	margin:none;
+}
+
+.weatherImg = {
+	width: 48px;
+	height: 48px;
+}
+
+.main-header {
+	margin:auto;
+	text-align: center;
+	padding-top:6vh;
+}
+
+.main-header  p {
+	padding-top:0px;
+	font-size: 1.2rem;
+	color:#95989A;
+
+}
+
+.header-info {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height:120px;
+	padding-top:9vh;
+	margin-bottom:3rem;
+}
+
+.air-quality {
+	width:50%;
+	text-align: center;
+}
+
+.current-weather {
+	width:50%;
+	text-align: center;
+}
+
+.current-weather img {
+	width: 48px;
+	height: 48px;
+	padding-bottom:12px;
+}
+
+
+
+.forecast-arrow-down {
+	margin:auto;
+	height:24px;
+	width:24px;
+	opacity: .5;
+}
+
+.forecast-arrow-up {
+	margin:auto;
+	height:24px;
+	width:24px;
+	opacity: .5;
+	transform: rotate(180deg);
+}
+
+.main {
+	margin: auto;
+	width:100%;
+	text-align:center;
+	height: 3vh;
+}
+
+.main-footer {
+	margin:auto;
+	display: flex;
+	justify-content: space-around;
+	padding-top:45vh;
+
+}
+
+.main-footer img {
+	width:10vw;
+	height: 10vh;
+	opacity: .6;
+	margin:auto;
+}
+
+.forecast-not-displayed {
+	height:0;
+	width :100%;
+	margin:auto;
+	display: flex;
+	justify-content: space-around;
+	opacity: 0
+
+}
+
+.forecast-displayed {
+	height:200px;
+	display: flex;
+	justify-content: space-around;
+	opacity: 1;
+}
+
+.day {
+	text-align: center;
+}
+
+.day img {
+	width: 10vw;
+	height: 10vh;
+	margin-bottom: 12px;
+	margin-top:12px;
+}
+
+.day p {
+	opacity: .8;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="appName">
+<html lang="en">
+<base href="/">
+<ui-view>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="../reset.css">
+   <link rel="stylesheet" href="../baseStyle.css">
+   <link rel="stylesheet" href="./settings/settingsStyle.css">
+	<title>Settings</title>
+</head>
+<header class="main-header">
+	<a ui-sref="index" ng-click="reloadRoute()"><img src="../icons/down-arrow.svg"></a>
+	<h2>Settings</h2>
+</header>
+
+
+<main role="main" class="main">
+	<h3>Auto-Detect Location</h3>
+	<div class="location-holder">
+		<span class="location-text" ng-style="offText">Off</span>
+			<label class="switch">
+			  <input type="checkbox" id="box" ng-model="location" ng-click="checkLocation(location)">
+			  <div class="slider round"></div>
+			</label>
+		<span class="location-text" ng-style="onText">On</span>
+	</div>
+	<div class="location-textbox" ng-style="locationTextbox">
+		<input type="text" ng-model="city" /><br>
+		<button ng-click="checkCity(city)">Check</button>
+	</div>
+	<div class="updated-city" ng-style="updatedCity">
+		<p>Now in:</p>
+		<h3>{{cityInfo[0]}}</h3>
+	</div>
+	
+	<div class="headlines-container">
+		<h3>Headlines to Follow</h3>
+		<div class="menu-container">
+			<div class="top-left" ng-model="H_business" active>Business</div>
+			<div class="top-right" ng-model="H_entertainment" active>Entertainment</div>
+		</div>
+		<div class="menu-container">
+			<div class="mid-left" ng-model="H_gaming" active>Gaming</div>
+			<div class="mid-right" ng-model="H_general" active>General</div>
+		</div>
+		<div class="menu-container">
+			<div class="mid-left" ng-model="H_music" active>Music</div>
+			<div class="mid-right" ng-model="H_sci" active>Sci / Nature</div>
+		</div>
+		<div class="menu-container">
+			<div class="bottom-left" ng-model="H_sports" active>Sports</div>
+			<div class="bottom-right" ng-model="H_tech" active>Tech</div>
+		</div>
+	</div>
+	</div>
+</main>
+
+
+<footer class="main-footer">
+
+</footer>
+
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script> -->
+
+ <script src="/settingsCtrl.js"></script>
+ <script src="/settingsSvc.js"></script>
+<!-- <script src="./script/app.js"></script>
+ <script src="./script/controller.js"></script>
+ <script src="./script/service.js"></script>
+
+<script src="./script/angular-cookies.js"></script>-->
+</ui-view>
+</body>
+</html>

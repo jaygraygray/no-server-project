@@ -1,0 +1,168 @@
+body {
+	text-align:center;
+}
+.main-header {
+	text-align: center;
+	padding-top:6vh;
+	display:flex;
+	justify-content: space-around;
+	width:70%;
+}
+
+.arrow {
+	margin-left:2rem;
+	padding-top:1rem;
+	margin-right:5rem;
+}
+
+.arrow-img {
+	width: 36px;
+	height: 36px;
+	transform: rotate(90deg);
+	margin-top:.1rem;
+}
+
+.menu {
+	background-color: #fff;
+	border-radius:10px;
+	margin:1rem;
+	padding:1rem;
+	position:fixed;
+	top:1rem;
+	right:2rem;
+
+}
+
+.menu img {
+	float:right;
+	width: 36px;
+	height: 36px;
+	margin-top:.1rem;
+}
+
+.up-arrow {
+	background-color: #fff;
+	border-radius:10px;
+	margin:1rem;
+	padding:1rem;
+	position:fixed;
+	top:6rem;
+	right:2rem;
+}
+
+.up-arrow img {
+	float:right;
+	width: 36px;
+	height: 36px;
+	margin-top:.1rem;
+	transform: rotate(180deg);
+}
+
+.main {
+	width: 100%;
+	margin:auto;
+	text-align:center;
+	margin-top: 3.5rem
+}
+
+.category-header {
+	font-size:1.5rem;
+	border-style: solid;
+	border-width: 0 0 3px 0;
+	border-color:#453258 ;
+	margin-left:6rem;
+	margin-right:6rem;
+	margin-bottom:2rem;
+	margin-top:2rem;
+	text-align:center;
+}
+
+a {
+	font-weight: lighter;
+	font-size: 1rem;
+	color: #261933 ;
+	text-decoration: none;
+	font-weight:600;
+}
+
+.story {
+	padding-bottom:1.3rem;
+	padding-top: 1.2rem;
+	margin-left:2rem;
+	margin-right:2rem;
+	text-align:justify;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	border-color:#95989A;
+
+}
+
+.story p {
+	padding-top:.5rem;
+	font-family: 'Open Sans', sans-serif;
+	font-size:1rem;
+}
+
+.source {
+	float: right;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size:.8rem;
+	margin-top:.4rem;
+}
+
+.menu-container {
+	list-style: none;
+	list-style:none;
+	font-family: 'Open Sans', sans-serif;
+	font-size:2vw;
+	text-decoration: none;
+	width:40%;
+}
+
+.menu-container ul {
+	list-style-type: none;
+	margin-top:1rem;
+}
+
+.menu-container li {
+	padding-bottom: 1rem
+}
+
+.headlinesMenu {
+	position: absolute;
+	right:-25rem;
+	top: 2vh;
+	padding:.5rem .3rem 1.5rem .3rem;
+	text-align:right;
+	width: 45%;
+	background:#fff;
+	border-radius:10px 0 0 10px;
+	border-color:#95989A;
+	margin-top:2rem;
+	
+}
+
+.headlinesMenuShow {
+	position:absolute;
+	top:2vh;
+	right:0rem;
+	padding: .5rem 2rem 1.5rem .3rem;
+	text-align:right;
+	width: 45%;
+	box-shadow: -5px 2px 30px #888888;
+	background:#fff;
+	border-radius:10px 0 0 10px;
+	border-color:#95989A;
+	margin-top:2rem;
+}
+
+.menu-hide {
+	position: absolute;
+	top:3px;
+	left:35px;
+	opacity: .4;
+	font-size:2rem;
+}
+
+.slide {}
+
