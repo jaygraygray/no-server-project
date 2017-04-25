@@ -112,7 +112,6 @@ a {
 
 .menu-container {
 	list-style: none;
-	list-style:none;
 	font-family: 'Open Sans', sans-serif;
 	font-size:2vw;
 	text-decoration: none;
@@ -130,8 +129,6 @@ a {
 
 .headlinesMenu {
 	position: absolute;
-	right:-25rem;
-	top: 2vh;
 	padding:.5rem .3rem 1.5rem .3rem;
 	text-align:right;
 	width: 45%;
@@ -164,5 +161,4 @@ a {
 	font-size:2rem;
 }
 
-.slide {}
 
